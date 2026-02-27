@@ -5,6 +5,4 @@ from .views import GameViewSet
 router = DefaultRouter()
 router.register(r'games', GameViewSet, basename='game')
 
-urlpatterns = [
-    path('', include(router.urls)),
-]
+urlpatterns = router.urls
